@@ -94,14 +94,8 @@ function check_archive_configs () {
 function get_archive_module () {
 
     case "$ARCHIVE_SYSTEM" in
-        rsync)
-            echo "run/rsync_archive"
-            ;;
-        rclone)
-            echo "run/rclone_archive"
-            ;;
-        cifs)
-            echo "run/cifs_archive"
+        rsync|rclone|cifs)
+            echo "run/${ARCHIVE_SYSTEM}_archive"
             ;;
         *)
             echo "Internal error: Attempting to configure unrecognized archive system: $ARCHIVE_SYSTEM"
