@@ -21,29 +21,24 @@ You're welcome to contribute to this repo by submitting pull requests, creating 
 ### Hardware
 
 Required:
-* [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/):  [Adafruit](https://www.adafruit.com/product/3400) or [Amazon](https://www.amazon.com/Raspberry-Pi-Zero-Wireless-model/dp/B06XFZC3BX/)
+* [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
   > Note: Of the many varieties of Raspberry Pi avaiable only the Raspberry Pi Zero and Raspberry Pi Zero W can be used as simulated USB drives. It may be possible to use a Pi Zero with a USB Wifi adapter to achieve the same result as the Pi Zero W but this hasn't been confirmed.
 
 * A Micro SD card, at least 8 GB in size, and an adapter (if necessary) to connect the card to your computer.
-* A mechanism to connect the Pi to the Tesla. Either:
-  * A USB A/Micro B cable: [Adafruit](https://www.adafruit.com/product/898) or [Amazon](https://www.amazon.com/gp/product/B013G4EAEI/), or 
-  * A USB A Add-on Board if you want to plug your Pi into your Tesla like a USB drive instead of using a cable. [Amazon](https://www.amazon.com/gp/product/B07BK2BR6C/), or
-  * A PCB kit if you want the lowest profile possible and you're able to solder. [Sparkfun](https://www.sparkfun.com/products/14526)
+* A USB A to Micro B cable / adaptor to connect the Pi to the Tesla
 
-Optional:
-* A case. The "Official" case: [Adafruit](https://www.adafruit.com/product/3446) or [Amazon](https://www.amazon.com/gp/product/B06Y593MHV). There are many others to choose from. Note that the official case won't work with the USB A Add-on board or the PCB kit.
-* USB Splitter if you don't want to lose a front USB port. [The Onvian Splitter](https://www.amazon.com/gp/product/B01KX4TKH6) has been reported working by multiple people on reddit.
+Optional: Refer to [our Wiki](https://github.com/cimryan/teslausb/wiki) for various options and other enhancements
 
 ### Software
-Download: [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/)
+* Download: [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/)
 
-Download and install: [Etcher](http://etcher.io)
+* Download and install: [Etcher](http://etcher.io)
  
 ## Set up the Raspberry Pi
-There are four phases to setting up the Pi:
+There are four main phases to setting up the Pi:
 1. Get the OS onto the micro sd card.
 1. Get a shell on the Pi.
-1. Set up the archive for dashcam clips.
+1. Set up the archive system for dashcam clips.
 1. Set up the USB storage functionality.
 
 There is a streamlined process for setting up the Pi which can currently be used if you plan to use Windows file shares, MacOS Sharing, or Samba on Linux for your video archive. [Instructions](doc/OneStepSetup.md).
@@ -72,7 +67,7 @@ sudo -i
 
 You'll stay in this root shell until you run the "halt" command in the "Set up USB storage functionality" below.  
 
-### Set up the archive for dashcam clips
+### Set up the archive system for dashcam clips
 Follow the instructions corresponding to the technology you'd like to use to host the archive for your dashcam clips. You must choose just one of these technologies; don't follow more than one of these sets of instructions:
 * Windows file share, MacOS Sharing, or Samba on Linux: [Instructions](doc/SetupShare.md).
 * SFTP/rsync: [Instructions](doc/SetupRSync.md)
